@@ -8,7 +8,13 @@ connectDB();
 
 const app = express();
 
-app.use(cors());
+const cors = require("cors");
+
+app.use(cors({
+  origin: "https://peppy-klepon-b7ce20.netlify.app",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 app.use(express.json());
 
 app.get("/", (req, res) => {
