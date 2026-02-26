@@ -8,7 +8,6 @@ connectDB();
 
 const app = express();
 
-const cors = require("cors");
 
 app.use(cors({
   origin: "https://peppy-klepon-b7ce20.netlify.app",
